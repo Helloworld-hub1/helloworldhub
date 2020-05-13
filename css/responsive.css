@@ -1,0 +1,74 @@
+/* Screens with width of 1200px and above*/
+@media only screen and (min-width: 1200px) {
+    .head {
+        height: 100vh; /* cover the whole screen */
+    }
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Small phones to small tablets: from 632px to 767px */
+@media only screen and (max-width: 767px) {
+    .toggle-menu {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .home-sect_content h1 {
+        font-size: 24px;
+    }
+    .sect-heading h2 {
+        font-size: 25px;
+    }
+    .btn {
+        padding: 8px 26px;
+    }
+    .event_period > h2 {
+        font-size: 22px;
+    }
+    .event h3 {
+        font-size: 22px;
+    }
+    .contact_body {
+        grid-template-columns: repeat(1, auto);
+    }
+    .footer_social ion-icon {
+        font-size: 20px;
+        margin: 0 20px;
+    }
+    .footer_copyright {
+        font-size: 14px;
+    }
+}
+
+/* Small phones: from 481px to 631px */
+@media only screen and (max-width: 631px) {
+    .prim-btn {
+        margin-bottom: 20px;
+    }
+    .btn {
+        padding: 10px 30px !important;
+    }
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .about_small {
+        padding: 0rem;
+    }
+    .team_item img {
+        width: 200px;
+        height: 200px;
+    }
+    .contact_body_details p {
+        font-size: 18px;
+    }
+    .contact_body_form {
+        grid-template-columns: repeat(1, auto);
+    }
+    .contact_body_form #message {
+        grid-column: 1 / span 1;
+    }
+}
+

@@ -1,0 +1,337 @@
+/* ---importing variables for css----- */
+@import url(partials/_variables.css);
+/* ---importing general for css----- */
+@import url(partials/_general.css);
+
+
+/* HEADER SECTION */
+.head {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/home-bg-3.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    z-index: 1;
+}
+/* TOGGLE MENU */
+.toggle-menu {
+    height: 3rem;
+    width: 3rem;
+    background-color: #f7f4f4;
+    border-radius: .4rem;
+    box-shadow:  .1rem .1rem 1rem #cacaca;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+.toggle-menu:hover{
+     box-shadow: 
+                inset  .5rem .5rem 1rem #cacaca,
+                inset  -.5rem -.5rem 1rem #fff;
+}
+.menu-bar{
+    width: 2rem;
+    height: 2px;
+    background: #333;
+    display: inline-block;
+    position: relative;
+    transition: background .5s;
+}
+.menu-bar::before,
+.menu-bar::after{
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #333;
+    transition: all .5s;
+}
+
+.menu-bar::before{
+    top: -.6rem;
+}
+.menu-bar::after{
+    top: .6rem;
+}
+/* .open will be added when you click on the toggle menu */
+.open-menu .menu-bar{
+    background-color: transparent;
+}
+.open-menu .menu-bar::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.open-menu .menu-bar::after{
+    top: 0;
+    transform: rotate(-135deg);
+}
+.open-menu .nav {
+    width: 20rem;
+}
+/* NAV */
+.nav {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    background-color: #eee;
+    box-shadow: -.5rem 0 1rem rgba(0,0,0,.2);
+    z-index: 2;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+.nav_link {
+    list-style: none;
+}
+.nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid #0078c4;
+    padding: .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.nav a:hover {
+    color: #0078c4;
+    transition: color .5s;
+}
+/* HOME SECTION */
+.home-sect {
+    padding: 10% 0 16% 0;
+    text-align: center;
+}
+.home-sect_content h1 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.home-sect_content .btn {
+    padding: 15px 30px;
+}
+.home-sect_content .prim-btn {
+    margin: 1rem;
+}
+
+/* ABOUT SECTION */
+.about-sect {
+    background-color: #eee;
+    text-align: justify;
+}
+.about_small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding: 0 5rem;
+}
+.about_small_item {
+    background: #fff;
+    box-shadow: .5rem .5rem 1rem #cacaca;
+    border-radius: 5px;            
+}
+.about_small_item div {
+    padding: 20px;
+}
+.about_small_item h3 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+.about_small_item h3::after {
+    content: "";
+    width: 30px;
+    display: block;
+    height: 2px;
+    background-color: #0078c4;
+    margin-top: 10px;
+}
+.about p,
+.about_small_item h3 {
+    word-spacing: 2px;
+    line-height: 20px;
+    letter-spacing: 2px; 
+}
+
+/* EVENT SECTION */
+.event-sect {
+    background: var(--title-color);
+    color: #fff;
+}
+/* Toggle Event starts */
+.event_next_list {
+    display: none;
+}
+.event_past_list {
+    display: none;
+}
+.open-event2 .event_past_list,
+.open-event1 .event_next_list {
+    display: block;
+}
+/* Toggle Event ends */
+.event_period {
+    display: grid;
+    grid-gap: 30px;
+}
+.event_period > h2 {
+    font-size: 25px;
+    border-bottom: 2px solid var(--border-color);
+    cursor: pointer;
+}
+.event_period ion-icon {
+    float: right;
+}
+.event_item {
+    display: flex;
+    margin-bottom: 30px;
+}
+.event_item_date {
+    font-size: 16px;
+    height: 80px;
+    width: auto;
+    padding: 15px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    text-align: center;
+}
+.event_item_details {
+    margin-left: 20px;
+}
+.event_item_details h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.event_item_details img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.event_item_details .paragraph {
+    font-size: 15px;
+    word-spacing: 1px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+/* TEAM SECTION */
+.team_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.team_item {
+    width: 300px;
+    flex-basis: auto;
+    color: var(--title-color);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+.team_item:hover {
+    box-shadow: .1rem .1rem 1rem #cacaca; 
+}
+.team_item img {
+    width: 250px;
+    height: 250px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.team_item h3,
+.team_item p {
+    padding: 15px;
+}
+.team_item_icon {
+    background-color: #eee;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.team_item_icon ion-icon {
+    padding: 20px;
+    font-size: 25px;
+}
+.team_item_icon a {
+    color: var(--primary-color);
+}
+/* CONTACT SECTION */
+.contact {
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(../img/contact/contact-img.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.contact_body {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+}
+.contact_body_details p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.contact_body_details ion-icon {
+    margin: 0 5px -3px 0;
+}
+.contact_body_form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 12px;
+}
+.contact_body_form input {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #727272;
+}
+.contact_body_form button {
+    border: none;
+    cursor: pointer;
+}
+.contact_body_form #message {
+    grid-column: 1 / span 2;
+}
+.contact_body_form .btn {
+    padding: 10px 30px;
+}
+/* FOOTER */
+footer {
+    background-image: url(../img/footer-bg.png);
+    background-size: cover;
+    background-clip: border-box;
+}
+.footer_content {
+    padding: 8% 8% 3% 8%;
+    text-align: center;
+    display: grid;
+    grid-gap: 20px;
+}
+.footer_social h2 {
+    margin-bottom: 20px;
+}
+.footer_social ion-icon {
+    font-size: 25px;
+    margin: 0 30px;
+    color: #414141;
+}
+.footer_social ion-icon:hover {
+    color: #0078c4;
+}
+.footer_copyright {
+    font-size: 17px;
+}

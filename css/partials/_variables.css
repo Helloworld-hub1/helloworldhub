@@ -1,0 +1,9 @@
+/*------css varaible------*/
+:root {
+    --primary-color: #0078c4;
+    --primary-color2: #00cee8;
+    --title-color: #141313;
+    --border-color: rgba(119, 119, 119, 0.29);
+    --gradient-color: linear-gradient(90deg, #0078c4 0%, #00cee8 100%);
+    --box-shadow: 0px 10px 30px rgba(57,56,61,0.205);
+}
