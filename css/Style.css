@@ -96,7 +96,6 @@
 }
 .nav a {
     font-size: 18px;
-    text-decoration: none;
     color: #333;
     border-bottom: 2px solid #0078c4;
     padding: .5rem;
@@ -324,12 +323,12 @@ footer {
 .footer_social h2 {
     margin-bottom: 20px;
 }
-.footer_social ion-icon {
+.footer_social a {
     font-size: 25px;
     margin: 0 30px;
     color: #414141;
 }
-.footer_social ion-icon:hover {
+.footer_social a:hover {
     color: #0078c4;
 }
 .footer_copyright {
