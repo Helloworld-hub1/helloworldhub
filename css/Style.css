@@ -77,7 +77,7 @@
 /* NAV */
 .nav {
     width: 0;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -121,13 +121,12 @@
     padding: 15px 30px;
 }
 .home-sect_content .prim-btn {
-    margin: 1rem;
+    margin: 0 1rem 1rem 0;
 }
 
 /* ABOUT SECTION */
 .about-sect {
     background-color: #eee;
-    text-align: justify;
 }
 .about_small {
     display: grid;
@@ -158,8 +157,8 @@
 .about p,
 .about_small_item h3 {
     word-spacing: 2px;
-    line-height: 20px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
+    line-height: 1.4;
 }
 
 /* EVENT SECTION */
@@ -219,11 +218,10 @@
     margin-bottom: 20px;
 }
 .event_item_details .paragraph {
-    font-size: 15px;
+    font-size: 14px;
     word-spacing: 1px;
-    line-height: 20px;
     letter-spacing: 2px;
-    text-align: justify;
+    line-height: 2.4;
 }
 
 /* TEAM SECTION */
@@ -252,6 +250,9 @@
     object-fit: cover;
     border-radius: 50%;
     margin-top: 10px;
+}
+.team_item h3 {
+    font-weight: 700;
 }
 .team_item h3,
 .team_item p {

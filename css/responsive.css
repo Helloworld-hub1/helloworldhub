@@ -33,7 +33,7 @@
     .contact_body {
         grid-template-columns: repeat(1, auto);
     }
-    .footer_social ion-icon {
+    .footer_social a {
         font-size: 20px;
         margin: 0 20px;
     }
@@ -54,6 +54,9 @@
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
+    .home-sect_content h1 {
+        font-size: 20px;
+    }
     .about_small {
         padding: 0rem;
     }

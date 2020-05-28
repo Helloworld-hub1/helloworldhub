@@ -5,8 +5,48 @@
     text-decoration: none;
 }
 body {
-    font-family: sans-serif, 'cursive';
+    font-family: 'Merriweather', serif;
+    
 }
+
+/* Page Load */
+.container {
+    animation: container 0ms 1150ms both;
+}
+.spin-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -9999;
+}
+.spin {
+    width: 70px;
+    height: 70px;
+    animation: spin 3000ms linear infinite;
+}
+
+/* keyframes */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes container {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* keyframes */
+
+/* Page Load */
+
 /* GENERAL */
 .grid {
     padding: 8%;
@@ -14,11 +54,17 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
-.sect-heading {
-    text-align: center;
+.home-sect_content h1,
+.sect-heading h2,
+.event_period h2,
+.event_item_details h3,
+.team_item h3 {
+    font-family: 'Montserrat', sans-serif;
+    
 }
 .sect-heading h2 {
     font-size: 30px;
+    text-align: center;
 }
 .sect-heading h2::after {
     content: "";
@@ -36,7 +82,6 @@ body {
     display: grid;
     grid-gap: 50px; 
 }
-
 /* BUTTONS */
 .btn {
     display: inline-block;
