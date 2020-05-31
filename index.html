@@ -20,7 +20,7 @@
         
         <!-- Page Load -->
         <div class="spin-area">
-            <img src="img/logo-only.png" alt="" class="spin">
+            <img src="img/logo-only.png" alt="image" class="spin">
         </div>
         <!-- Page Load -->
         
@@ -47,7 +47,7 @@
                     <div class="home-sect_content">
                         <h1>Learn, Create, Share and Network...</h1>
                         <a href="#about" class="btn prim-btn">Learn More.</a>
-                        <a href="https://bit.ly/hwh-reg" class="btn sec-btn" target="_blank">Join Us.</a>
+                        <a href="join/join.html" class="btn sec-btn" target="_blank">Join Us.</a>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="event_item">
                                 <div class="event_item_date">
-                                    <h4>Jan 20120</h4>
+                                    <h4>Jan 2020</h4>
                                 </div>
                                 <div class="event_item_details">
                                     <h3>Free Web Design Bootcamp UNILORIN</h3>
@@ -149,7 +149,7 @@
                     </div>
                     <div class="team_list">
                         <div class="team_item">
-                            <img src="img/team/dejisol.jpg" alt="Deji">
+                            <img src="img/team/dejisol.jpeg" alt="Deji">
                             <h3 class="team_name uppercase">Ayodeji Ogundare</h3>
                             <h4>Team Lead</h4>
                             <p>Community Builder | GCP Cloud Professional | Frontend Developer | Media Consultant | Graphics Designer</p>
@@ -218,11 +218,12 @@
                             <p><ion-icon name="call"></ion-icon>Phone: +2349036263627</p>
                             <p><ion-icon name="mail"></ion-icon>Email: helloworldhub.dev@gmail.com</p>
                         </div>
-                        <form class="contact_body_form" action="">
+                        <form class="contact_body_form" id="contact-form">
                             <input type="text" placeholder="Name" id="name" required>
                             <input type="email" placeholder="Email" id="email" required>
-                            <input type="text" placeholder="Message" id="message" required>
-                            <button class="btn prim-btn" id="submit">SEND</button>
+                            <textarea placeholder="Drop your message" id="message" rows="5" required></textarea>
+                            <button type="submit" class="btn prim-btn" id="submit">SEND</button>
+                            <p class="alert-msg">Your message has been sent!</p>
                         </form>
                     </div>
                 </div>
@@ -247,7 +248,18 @@
         
         </div>
         
-     <!-- SCRIPT -->   
+     <!-- SCRIPT -->
+     
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+
+    
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script> <!-- Make sure the firebase script is above the main js -->
+       
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>  
     </body>

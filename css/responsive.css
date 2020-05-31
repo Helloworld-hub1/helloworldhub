@@ -7,6 +7,9 @@
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
+    .contact_body {
+        grid-template-columns: repeat(1, auto);
+    }
 }
 
 /* Small phones to small tablets: from 632px to 767px */
@@ -30,9 +33,6 @@
     .event h3 {
         font-size: 22px;
     }
-    .contact_body {
-        grid-template-columns: repeat(1, auto);
-    }
     .footer_social a {
         font-size: 20px;
         margin: 0 20px;
@@ -44,11 +44,17 @@
 
 /* Small phones: from 481px to 631px */
 @media only screen and (max-width: 631px) {
-    .prim-btn {
-        margin-bottom: 20px;
+    .home-sect {
+        padding: 20% 0 26% 0;
     }
-    .btn {
-        padding: 10px 30px !important;
+    .event_item_date {
+        font-size: 10px;
+        height: 50px;
+        width: auto;
+        padding: 8px;
+    }
+    .home-sect_content .btn {
+        padding: 12px 25px;
     }
 }
 
@@ -65,12 +71,13 @@
         height: 200px;
     }
     .contact_body_details p {
-        font-size: 18px;
+        font-size: 16px;
     }
     .contact_body_form {
         grid-template-columns: repeat(1, auto);
     }
-    .contact_body_form #message {
+    .contact_body_form #message,
+    .contact_body_form .alert-msg {
         grid-column: 1 / span 1;
     }
 }

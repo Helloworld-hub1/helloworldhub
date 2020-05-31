@@ -9,8 +9,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1">
         <!-- LINKS -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/join.css">
         <link rel="stylesheet" href="css/joinrespon.css">
+        <link rel="icon" href="../img/logo-only.png" type="image">
         <!-- TITLE -->
         <title>Hello World Hub</title>
     </head>
@@ -18,29 +20,60 @@
         <div class="join">
             <div class="join_content">
                 <h2>Join the community</h2>
-                <form action="/action_page.php">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                <form class="join_form" id="join-form">
+                    <label for="full name" class="required_label">Full Name</label>
+                    <input type="text" id="full-name" name="full name" placeholder="Surname, other names" required>
 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                    <label for="email" class="required_label">Email</label>
+                    <input type="text" id="email" name="email" required>
+                    
+                    <label for="number" class="required_label">Whatsapp number</label>
+                    <input type="number" id="number" name="number" required>
+                    
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                    
+                    <label for="bday">Birthday</label>
+                    <input type="date" name="bday" id="birthday">
 
                     <label for="country">Country</label>
-                    <select id="country" name="country" required>
-                        <option value="australia">Nigeria</option>
-                        <option value="canada">Ghana</option>
-                        <option value="usa">South Africa</option>
+                    <select id="country" name="country">
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="South Africa">South Africa</option>
+                    </select>
+                    
+                    <label for="occupation">Ocupation</label>
+                    <select id="occupation" name="occupation">
+                        <option value="Student">Student</option>
+                        <option value="Worker">Worker</option>
+                        <option value="Business Owner">Business Owner</option>
                     </select>
 
-                    <input type="submit" value="Submit">
+                    <button type="submit" id="submit" class="btn prim-btn">Submit</button>
+                    
                 </form>
+                <div  class="alert-msg">
+                    <p>Thanks for joining us</p>
+                </div>
             </div>    
             <div class="join_home">
                 <a href="../index.html">Home</a>
             </div>
         </div>
         
-     <!-- SCRIPT -->   
+     <!-- SCRIPT -->
+     
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+
+    
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script> <!-- Make sure the firebase script is above the main js -->
+           
     <script src="js/join.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>  
     </body>

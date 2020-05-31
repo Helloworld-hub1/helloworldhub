@@ -108,7 +108,7 @@
 }
 /* HOME SECTION */
 .home-sect {
-    padding: 10% 0 16% 0;
+    padding: 12% 0 16% 0;
     text-align: center;
 }
 .home-sect_content h1 {
@@ -237,7 +237,7 @@
     flex-basis: auto;
     color: var(--title-color);
     border-radius: 6px;
-    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
     margin-bottom: 30px;
 }
 .team_item:hover {
@@ -272,7 +272,7 @@
 }
 /* CONTACT SECTION */
 .contact {
-    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(../img/contact/contact-img.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../img/contact/contact-img.jpg);
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -294,7 +294,8 @@
     grid-template-columns: repeat(2, auto);
     grid-gap: 12px;
 }
-.contact_body_form input {
+.contact_body_form input,
+.contact_body_form textarea {
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #727272;
@@ -303,11 +304,16 @@
     border: none;
     cursor: pointer;
 }
-.contact_body_form #message {
+.contact_body_form #message,
+.contact_body_form .alert-msg {
     grid-column: 1 / span 2;
 }
 .contact_body_form .btn {
     padding: 10px 30px;
+}
+.contact_body_form .alert-msg {
+    color: #01a001;
+    display: none;
 }
 /* FOOTER */
 footer {
